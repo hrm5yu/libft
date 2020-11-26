@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 13:08:19 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/21 08:41:59 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 16:45:08 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	int				i;
 
 	i = 0;
-	c = (unsigned char)c;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	while (n--)
 	{
 		d[i] = s[i];
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return (d + i + 1);
 		i++;
 	}
@@ -33,6 +32,14 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 }
 
 /*
+**int		main(void)
+**{
+**	char a[] = "hello";
+**	char b[] = "world";
+**	printf("%s\n", memccpy(a, b, 'h', 0));
+**}
+**
+**
 **int		main(void)
 **{
 **		char	a[] = "abcdefghijklmnopqrstuvwxyz";

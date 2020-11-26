@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 13:22:17 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/23 16:16:43 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:09:36 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = start;
 	if (i >= ft_strlen(s))
 	{
-		p = ft_calloc(1, 1);
+		if (!(p = (char *)malloc(sizeof(char))))
+			return (NULL);
+		*p = '\0';
 		return (p);
 	}
-	j = i;
-	while (s[j] != '\0' && j < len)
+	j = 0;
+	while (s[i++] != '\0' && j < len)
 		j++;
 	if (!(p = (char *)malloc(j * sizeof(char) + 1)))
 		return (NULL);
 	j = 0;
-	while (s[i] != '\0' && j < len)
-		p[j++] = s[i++];
+	while (s[start] != '\0' && j < len)
+		p[j++] = s[start++];
 	p[j] = '\0';
 	return (p);
 }

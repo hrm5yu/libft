@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 16:07:41 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/23 01:10:07 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:22:29 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{

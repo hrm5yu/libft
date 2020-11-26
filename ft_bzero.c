@@ -6,20 +6,19 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 22:36:40 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/15 01:12:35 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 16:50:35 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char *dest;
 
 	dest = (unsigned char *)s;
 	while (n-- > 0)
 		*dest++ = '\0';
-	return (s);
 }
 
 /*

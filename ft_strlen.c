@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 16:18:31 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/15 17:18:44 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 16:47:45 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlen(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

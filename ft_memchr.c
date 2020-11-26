@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 09:55:32 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/12 17:03:50 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 16:45:23 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*src;
 
 	src = (unsigned char *)s;
-	c = (unsigned char)c;
 	while (n--)
 	{
-		if (*src == c)
+		if (*src == (unsigned char)c)
 			return ((void *)src);
 		src++;
 	}
