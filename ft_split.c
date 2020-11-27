@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:58:19 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/24 02:08:55 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:52:29 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int		count_words(char const *s, char c)
 {
-	int		i;
-	int		count;
-	int		flag;
+	size_t	i;
+	size_t	count;
+	size_t	flag;
 
 	flag = 0;
 	count = 0;
@@ -35,9 +35,9 @@ static int		count_words(char const *s, char c)
 	return (count);
 }
 
-static int		count_len(char const *s, char c)
+static size_t	count_len(char const *s, char c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != c && s[i] != '\0')
@@ -47,7 +47,7 @@ static int		count_len(char const *s, char c)
 
 static void		*a_free(char **p)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (p[i] != NULL)
@@ -58,7 +58,7 @@ static void		*a_free(char **p)
 
 static void		set_word(char *p, char const *s, char c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (*s != c && *s != '\0')
@@ -69,7 +69,7 @@ static void		set_word(char *p, char const *s, char c)
 char			**ft_split(char const *s, char c)
 {
 	char	**p;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (s == NULL)

@@ -6,15 +6,15 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 00:26:57 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/21 08:42:17 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/27 00:02:08 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		nbr_len(long nbr)
+static size_t	nbr_len(long nbr)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (nbr)
@@ -28,7 +28,7 @@ static int		nbr_len(long nbr)
 static long		pow_ten(long nbr)
 {
 	long	i;
-	int		len;
+	size_t	len;
 
 	i = 1;
 	len = nbr_len(nbr);

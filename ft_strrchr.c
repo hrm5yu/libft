@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 01:55:52 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:13:56 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/27 00:45:49 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,12 @@ char	*ft_strrchr(const char *s, int c)
 **{
 **	char	a[] = "abcdefghijklmnopqrstuvwxyz";
 **	char	b[] = "abcdefghijklmnopqrstuvwxyz";
+**	char	c[] = "abcdefghijkl\0mnopqrstuvwxyz";
 **
+**	puts("-----original-----");
+**	printf("%s\n", strrchr(c, 's'));
+**	puts("--------ft--------");
+**	printf("%s\n", ft_strrchr(c, 's'));
 **	puts("-----original-----");
 **	printf("%s\n", strrchr(a, 'z'));
 **	puts("--------ft--------");

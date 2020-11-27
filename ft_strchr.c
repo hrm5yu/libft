@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 01:28:21 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 16:42:03 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:50:56 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 14:03:58 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/23 16:11:15 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:53:41 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*p;
-	int		len;
-	int		i;
+	size_t	len;
+	size_t	i;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);

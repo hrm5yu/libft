@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:31:32 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/18 23:10:13 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:53:53 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	int		i;
-	int		n;
+	size_t	i;
+	size_t	n;
 	size_t	dlen;
 	size_t	slen;
 

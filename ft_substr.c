@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 13:22:17 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:09:36 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/27 00:26:19 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 **	printf("return:%s\n", p);
 **	for (int i = 0; i < 10; i++)
 **		write(1, &p[i], 1);
+**	printf("\n");
+**	printf("s:%s\n", "");
+**	printf("start:%d\n", 0);
+**	printf("len:%d\n", 0);
+**	printf("return:%s\n", ft_substr(NULL, 0, 0));
 **	printf("\n");
 **	return (0);
 **}

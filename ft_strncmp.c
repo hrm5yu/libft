@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 18:16:56 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 22:39:47 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:49:54 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (n && s1[i] && s2[i])

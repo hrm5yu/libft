@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 16:19:48 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/21 08:43:34 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:50:20 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (size > 1 && src[i] != '\0')

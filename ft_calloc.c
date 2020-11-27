@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 20:11:31 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/14 16:15:54 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/27 00:37:51 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
-	int		i;
 
-	i = 0;
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	p = (void *)malloc(count * size);
 	if (p == NULL)
 		return (NULL);

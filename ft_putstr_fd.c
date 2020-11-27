@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 00:19:58 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 22:58:41 by shirama          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:52:45 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
+	size_t	i;
 
 	if (s != NULL)
 	{
