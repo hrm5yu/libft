@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 16:19:48 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:50:20 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:32:15 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 

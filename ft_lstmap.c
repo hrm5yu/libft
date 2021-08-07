@@ -3,28 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 00:02:57 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:26:07 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:39:31 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*n;
 	t_list	*new_list;
 
 	if (!lst || !f)
 		return (NULL);
-	if (!(new_list = ft_lstnew(f(lst->content))))
+	new_list = ft_lstnew(f(lst->content));
+	if (!(new_list))
 		return (NULL);
 	lst = lst->next;
 	while (lst != NULL)
 	{
-		if (!(n = ft_lstnew(f(lst->content))))
+		n = ft_lstnew(f(lst->content));
+		if (!(n))
 		{
 			ft_lstclear(&new_list, del);
 			return (NULL);

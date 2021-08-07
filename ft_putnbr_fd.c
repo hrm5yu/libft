@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 00:26:57 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/27 00:02:08 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:37:52 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	nbr_len(long nbr)
 	return (i);
 }
 
-static long		pow_ten(long nbr)
+static long	pow_ten(long nbr)
 {
 	long	i;
 	size_t	len;
@@ -37,13 +37,14 @@ static long		pow_ten(long nbr)
 	return (i / 10);
 }
 
-void			ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbr;
 	long	i;
 
 	nbr = n;
-	nbr = nbr < 0 ? -nbr : nbr;
+	if (nbr < 0)
+		nbr = -nbr;
 	if (n < 0)
 		ft_putchar_fd('-', fd);
 	else if (n == 0)

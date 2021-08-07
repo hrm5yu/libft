@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:31:32 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:53:53 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:32:15 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	n;

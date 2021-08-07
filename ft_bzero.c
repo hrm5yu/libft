@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 22:36:40 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 16:50:35 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:40:26 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *dest;
+	unsigned char	*dest;
 
 	dest = (unsigned char *)s;
 	while (n-- > 0)

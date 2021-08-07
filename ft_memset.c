@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 14:20:14 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/23 00:33:42 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:38:07 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *dest;
+	unsigned char	*dest;
 
 	dest = (unsigned char *)b;
 	while (len--)

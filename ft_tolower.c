@@ -3,30 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 20:09:54 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:09:53 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:30:17 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 'a' - 'A';
 	return (c);
 }
-
-/*
-**int		main(void)
-**{
-**	int		i;
-**
-**	for (i = 'A'; i <= 'Z'; i++)
-**	{
-**		printf("arg:%c -> %c\n", i, ft_tolower(i));
-**	}
-**}
-*/

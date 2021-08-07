@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 18:17:58 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 22:53:46 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:41:00 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	space_skip(const char *str, int *i)
 {
 	while (((str[*i] >= 9 && str[*i] <= 13)
-	|| str[*i] == 32) && str[*i] != '\0')
+			|| str[*i] == 32) && str[*i] != '\0')
 		*i = *i + 1;
 }
 
@@ -30,7 +30,7 @@ static void	is_minus(const char *str, int *minus, int *i)
 		*i = *i + 1;
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned long	sum;
 	int				minus;

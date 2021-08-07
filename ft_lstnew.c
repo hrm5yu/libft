@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 23:10:13 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/17 00:57:29 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:38:34 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	if (!(new = (t_list *)malloc(sizeof(t_list))))
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!(new))
 		return (NULL);
 	new->content = content;
 	new->next = NULL;

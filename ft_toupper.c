@@ -3,30 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 20:06:17 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/15 22:45:33 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:30:09 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 'a' - 'A';
 	return (c);
 }
-
-/*
-**int		main(void)
-**{
-**	int		i;
-**
-**	for (i = 'a'; i <= 'z'; i++)
-**	{
-**		printf("arg:%c -> %c\n", i, ft_toupper(i));
-**	}
-**}
-*/

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 23:04:09 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:55:17 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:40:12 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count_nbr(long n)
+static int	count_nbr(long n)
 {
 	int		i;
 
@@ -25,7 +25,7 @@ static int		count_nbr(long n)
 	return (i);
 }
 
-static long		pow_10(int n)
+static long	pow_10(int n)
 {
 	long	i;
 
@@ -35,7 +35,7 @@ static long		pow_10(int n)
 	return (i);
 }
 
-static void		set_nbr(char *p, long nbr)
+static void	set_nbr(char *p, long nbr)
 {
 	int		len;
 	int		i;
@@ -55,7 +55,7 @@ static void		set_nbr(char *p, long nbr)
 	p[i] = '\0';
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*p;
 	int		i;
@@ -63,7 +63,8 @@ char			*ft_itoa(int n)
 
 	i = 0;
 	nbr = n;
-	nbr = nbr < 0 ? -nbr : nbr;
+	if (nbr < 0)
+		nbr = -nbr;
 	if (n > 0)
 		p = (char *)malloc(sizeof(char) * count_nbr(nbr) + 1);
 	else

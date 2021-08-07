@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:58:19 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/26 23:52:29 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 08:03:20 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -45,7 +45,7 @@ static size_t	count_len(char const *s, char c)
 	return (i);
 }
 
-static void		*a_free(char **p)
+static void	*a_free(char **p)
 {
 	size_t	i;
 
@@ -56,7 +56,7 @@ static void		*a_free(char **p)
 	return (NULL);
 }
 
-static void		set_word(char *p, char const *s, char c)
+static void	set_word(char *p, char const *s, char c)
 {
 	size_t	i;
 
@@ -66,7 +66,7 @@ static void		set_word(char *p, char const *s, char c)
 	p[i] = '\0';
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**p;
 	size_t	i;
@@ -74,7 +74,8 @@ char			**ft_split(char const *s, char c)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	if (!(p = (char **)malloc(sizeof(char *) * count_words(s, c) + 1)))
+	p = (char **)malloc(sizeof(char *) * count_words(s, c) + 1);
+	if (!(p))
 		return (NULL);
 	while (*s != '\0')
 	{
@@ -82,7 +83,8 @@ char			**ft_split(char const *s, char c)
 			s++;
 		if (*s != c && *s != '\0')
 		{
-			if (!(p[i] = (char *)malloc(sizeof(char) * count_len(s, c) + 1)))
+			p[i] = (char *)malloc(sizeof(char) * count_len(s, c) + 1);
+			if (!(p[i]))
 				return (a_free(p));
 			set_word(p[i], s, c);
 			s = s + count_len(s, c);

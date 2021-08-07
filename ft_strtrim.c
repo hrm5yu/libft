@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shirama <shirama@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 16:17:19 by shirama           #+#    #+#             */
-/*   Updated: 2020/11/27 00:36:33 by shirama          ###   ########.fr       */
+/*   Updated: 2021/08/07 07:35:28 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	if (len < i)
 	{
-		if (!(p = (char *)malloc(sizeof(char))))
+		p = (char *)malloc(sizeof(char));
+		if (!p)
 			return (NULL);
 		p[0] = '\0';
 	}
@@ -71,6 +72,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 **	printf("set:%s\n", "NULL");
 **	printf("return:\"%s\"\n", ft_strtrim(NULL, NULL));
 **	printf("\n");
+**	printf("%s\n", ft_strtrim("1aaaaaa1a", "abcdefg"));
 **	return (0);
 **}
 */
