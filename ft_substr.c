@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 13:22:17 by shirama           #+#    #+#             */
-/*   Updated: 2021/08/07 18:06:51 by shirama          ###   ########.fr       */
+/*   Updated: 2022/01/26 23:48:53 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	i = start;
-	if (i >= ft_strlen(s))
+	if (i > ft_strlen(s))
 		return ((char *)calloc(1, sizeof(char)));
 	j = 0;
 	while (s[i++] != '\0' && j < len)

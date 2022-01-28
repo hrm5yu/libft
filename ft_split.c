@@ -6,7 +6,7 @@
 /*   By: shirama <shirama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:58:19 by shirama           #+#    #+#             */
-/*   Updated: 2021/12/21 18:02:16 by shirama          ###   ########.fr       */
+/*   Updated: 2021/12/22 16:01:37 by shirama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	count_len(char const *s, char c)
 	return (i);
 }
 
-static void	*a_free(char **p)
+static void	*all_free(char **p)
 {
 	size_t	i;
 
@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c)
 		{
 			p[i] = (char *)malloc(sizeof(char) * count_len(s, c) + 1);
 			if (!(p[i]))
-				return (a_free(p));
+				return (all_free(p));
 			set_word(p[i], s, c);
 			s = s + count_len(s, c);
 			i++;
